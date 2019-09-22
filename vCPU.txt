@@ -1,0 +1,3 @@
+A vCPU is a virtual central processing unit that runs on VMward, the marker leader in virtualization software.
+
+A general estimation is that 1 vCPU = 1 Physical CPU core.
