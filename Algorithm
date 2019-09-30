@@ -5,3 +5,7 @@
 std::vector::erase (iterator position);
              erase (iterator first, iterator last);
 removes from the vector either a single element(position) or a range of elements([first, last])
+
+std:unique
+
+removes all but the first element from every consecutive group of equivalent elements in the range [first, last)
