@@ -1,3 +1,7 @@
 逆序对问题有三种算法可以处理： 冒泡算法，归并排序，以及树状数组求解。
 
 一个题目，如果一个区间具有单调性质，那么一定可以二分，但是如果说这道题目没有单调性质，而是具有某种区间性质的话，同样可以使用二分。
+
+std::vector::erase (iterator position);
+             erase (iterator first, iterator last);
+removes from the vector either a single element(position) or a range of elements([first, last])
