@@ -1,0 +1,24 @@
+class Solution {
+public:
+    int dfs(vector<vector<int>>&grid, int x, int y){
+        int n = grid.size();
+        int m = grid[0].size();
+        if(x<0 || y<0 || x>=n || y>=m || grid[x][y] == 0)
+            return 0;
+        int c = 0;
+        swap(c,grid[x][y]);
+        int r = c + max({dfs(grid, x-1, y), dfs(grid, x+1, y), dfs(grid, x, y-1), dfs(grid, x, y+1)});
+        swap(c,grid[x][y]);
+        return r;
+    }
+    int getMaximumGold(vector<vector<int>>& grid) {
+        int n = grid.size();
+        int m = grid[0].size();
+        int res = 0;
+        for (int i = 0; i < n; i++)
+            for (int j = 0; j < m; j++)
+                res = max(res, dfs(grid, i, j));
+        return res;
+        
+    }
+};
